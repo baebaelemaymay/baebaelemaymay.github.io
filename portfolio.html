@@ -271,7 +271,18 @@ a {
 
   <h3>2019 RDT Control Board</h3>
   <p>This board was designed to consolidate control 4 distinct subsystems into one board: a digging system, a storage and filtration system, a locomotion system, and a deposition system.</p>
-  <p>This design was developed by creating 4 prototype boards, then combining the schematic design of each PCB to yield a board capable of being populated with different components to control each system uniquely.</p>
+  <p>This design was developed by creating 4 prototype boards, then combining the schematic design of each PCB to yield a board capable of being populated with different components to control each system uniquely. The list of possible components to be used on this board is given here:</p>
+  <ul type="square">
+    <li>A Teensy 3.2 for making low level decisions for the robot</li>
+    <li>An ESP8266 so that each robot in the two robot system can communicate with each other, with the base station that handles autonomy, and with the ground station</li>
+    <li>D-Sub connectors for interfacing with 2 different kinds of brushless motor controllers with a maximum of 3 motor controllers per board</li>
+    <li>An IMU for tracking motion and managing postion, as well as providing feedback for locomotion</li>
+    <li>A power MOSFET intended for controlling DC vibration motors</li>
+    <li>2 motor controller ICs for controlling linear actuators and brushed motors</li>
+    <li>A servo output connection with 5V, a PWM line, and ground</li>
+    <li>6 connections to digital pins with pull-up resistors for measuring input from reed switches, limit switches</li>
+    <li>Input connections for a potentiometer to measure the current depth of the digging mechanism</li>
+  </ul>
 </div>
 
 <!-- Portfolio Gallery Grid -->
@@ -328,7 +339,16 @@ a {
 <span class="SunbotDot" onclick="SunbotCurrentSlide(5)"></span>
 </div> 
       <h3>Sunbot Control Board</h3>
-      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+      <p>This board was made for a summer research project making robotic appendages for plants. The basic idea is the robot holds a terrarium filled with plants, and drives around to seek the brightest area for the plants. Multiple sunbots can be used in a group to communicate and cooperate in finding the brightest area.</p>
+      <p>To this end, a control board was fabricated with the following features:</p>
+      <ul type="square">
+        <li>An Arduino Nano to handle input and output operations</li>
+        <li>2 voltage dividers for measuring the resistance of photocell resistors that measure the light levels around the robot</li>
+        <li>A 2-channel motor controller to control drive wheels that steer the robot</li>
+        <li>An XBee radio to communicate with the rest of the swarm</li>
+        <li>An IR LED and receiver to communicate with earlier generations of sunbots</li>
+        <li>Voltage regulator circuit to stabilize output from onboard solar panels</li>
+      </ul>
     </div>
   </div>
   
@@ -338,7 +358,7 @@ a {
     <div class="content">
     <img src="Portfolio Images/Feather_ISP.png" alt="Feather ISP Board" style="width:47%" class="center">
       <h3>Feather ISP Header</h3>
-      <p>Simple board meant to connect to a feather similar a stackable shield and break out the VCC, GND, MISO, MOSI, RST, and SCK pins in a standard 6-pin ISP Header</p>
+      <p>A simple board meant to connect to a feather similar a stackable shield and break out the VCC, GND, MISO, MOSI, RST, and SCK pins in a standard 6-pin ISP Header</p>
     </div>
   </div>
   
